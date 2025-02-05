@@ -1,0 +1,165 @@
+.parent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: purple;
+    color: white;
+    padding: 20px;
+    font-size: 25px;
+}
+
+
+header {
+    margin-bottom: 20px;
+    border-bottom: 5px solid white; 
+}
+
+footer p {
+    background-color: purple;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px; 
+}
+
+.child > a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.child > a:hover {
+    color: black;
+    background-color: white;
+    border: 1px solid wheat;
+    border-radius: 10px;
+}
+
+
+body {
+    padding: 0px;
+    margin: 0px;
+    height: 100%;
+}
+
+
+
+/* General Container */
+.container {
+    margin-top: 50px;
+    padding: 20px;
+}
+
+/* Image Section */
+.item-image-container {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    
+    
+}
+
+.item-image {
+    width: 200px;
+    height: 200px;
+     /* Reduced image size */
+    /* Ensures the image does not stretch */
+    border-radius: 8px;
+   
+    transition: height 3s,width 2s;
+}
+.item-image-container > .item-image:hover{
+    height: 300px;
+    width: 400px;
+    
+}
+
+/* Item Details Section */
+.item-details {
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out 0.5s; /* Delay for text animation */
+}
+
+.item-name {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.item-desc {
+    font-size: 20px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.item-cost {
+    font-size: 22px;
+    color: #2f8a0d;
+    font-weight: bold;
+}
+#btn{
+    padding: 10px;
+    background-color: #2f8a0d;
+    color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin:0px 5px 0px 0px;
+}
+a{
+    color: wheat;
+    text-decoration: none;
+
+}
+#btn:hover{
+    background-color: #7dfa4f;
+    
+    cursor: pointer;
+    color: black;
+}
+#a:hover{
+    color: black;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .item-image-container {
+        margin-bottom: 20px;
+    }
+
+    .item-details {
+        padding: 15px;
+        text-align: center;
+    }
+
+    .item-name {
+        font-size: 24px;
+    }
+
+    .item-desc {
+        font-size: 18px;
+    }
+
+    .item-cost {
+        font-size: 20px;
+    }
+}

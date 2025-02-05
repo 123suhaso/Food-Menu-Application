@@ -1,0 +1,84 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'food/aboutpage.css' %}">
+    <title>About Page</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/v4-shims.min.css" integrity="sha512-U+fiq69HDM4etLVUiZeQxmJE5AZoft4ti4TIM95MqXV0IjBXgT2oHw5cNeIFqz3OE/axTKQIR8e7zlm3xbOVmg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .achild> a:hover{
+        background-color: purple;
+        color: white;
+        border: none;
+
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="parent">
+            <div class="child achild">
+                <ion-icon name="fast-food-outline"></ion-icon>
+                <b>Food App</b>
+            </div>
+            <div class="child">
+                
+                <a href="{% url 'foodapp:home' %}">Home</a>
+                <a href="{% url 'foodapp:about' %}">About</a>
+                <a href="{% url 'foodapp:contact' %}">Contact Us</a>
+            </div>
+            <div class="child social">
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                
+            </div>
+        </div>
+    </header>
+    <main>
+        <h1 class="head">About Us</h1>
+        <p class="para"><q>Food Menu Applications streamline the dining experience by offering users access to curated menus, customizable recipes, and convenient ordering options—all at their fingertips.</q></p>
+        <div class="about">
+            <h2>Our history</h2>
+            <p>Our journey started with a simple idea: to make food discovery and menu planning effortless. Founded in 2023, we are passionate about connecting food enthusiasts with amazing culinary experiences.</p>
+
+        </div>
+        <div class="about">
+            <h2>Our Mission</h2>
+            <p>Our mission is to provide a seamless dining experience for our users by offering a wide range of food options, customizable recipes, and convenient ordering options.</p>
+        </div>
+        <div class="main">
+            <h1>Meet Our Team</h1>
+            <div class="parent2">
+                <div class="child">
+                    <img src="{% static 'images/suhas2 o.jpg' %}" alt="">
+                    <h2>Suhas O</h2>
+                    <p>Founder & Head Chef</p>
+
+                </div>
+                <div>
+                    <img src="{% static 'images/suhas2 o.jpg' %}" alt="">
+                    <h2>Suhas O</h2>
+                    <p>Product Manager</p>
+
+                </div>
+                <div>
+                    <img src="{% static 'images/suhas2 o.jpg' %}" alt="">
+                    <h2>Suhas O</h2>
+                    <p>Lead Developer</p>
+
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <p>&copy; {% now 'Y' %} FoodApp. All Rights Reserved.</p>
+    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js" integrity="sha512-b+nQTCdtTBIRIbraqNEwsjB6UvL3UEMkXnhzd8awtCYh0Kcsjl9uEgwVFVbhoj3uu1DO1ZMacNvLoyJJiNfcvg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>

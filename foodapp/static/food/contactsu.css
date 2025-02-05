@@ -1,0 +1,42 @@
+.parent{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: purple;
+    color: white;
+    padding: 20px;
+    font-size: 25px;
+
+
+}
+h1{
+    text-align: center;
+    background-color: rgb(17, 214, 17);
+    color: white;
+    padding: 10px;
+    margin-bottom: 450px;
+}
+
+footer p{
+    background-color: purple;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+.child> a{
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.child> a:hover{
+    color: black;
+    background-color: white;
+    border: 1px solid wheat;
+    border-radius: 10px;
+}
+body{
+    padding: 0px;
+    margin: 0px;
+    height: 100%;
+}

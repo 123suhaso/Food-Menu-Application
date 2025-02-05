@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item Description Page</title>
+    <link rel="stylesheet" href="{% static 'food/detailitems.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/v4-shims.min.css" integrity="sha512-U+fiq69HDM4etLVUiZeQxmJE5AZoft4ti4TIM95MqXV0IjBXgT2oHw5cNeIFqz3OE/axTKQIR8e7zlm3xbOVmg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .achild> a:hover{
+        background-color: purple;
+        color: white;
+        border: none;
+
+
+    }
+   
+    </style>
+</head>
+<body>
+    <header>
+        <div class="parent">
+            <div class="child achild">
+                <ion-icon name="fast-food-outline"></ion-icon>
+                <a href="">Food App</a>
+            </div>
+            <div class="child">
+                <a href="">Description View</a>
+                
+                <a href="{% url 'foodapp:firstview' %}">Admin Page</a>
+                
+            </div>
+           
+        </div>
+    </header>
+    <div class="container">
+        <div class="row">
+        
+            <div class="col-md-6">
+                <div class="item-image-container">
+                    <img src="{{ id.item_image }}" class="item-image fade-in" alt="Item Image">
+                </div>
+            </div>
+    
+            
+            <div class="col-md-6">
+                <div class="item-details fade-in">
+                    <h1 class="item-name">Item Name: {{ id.item_name }}</h1>
+                    <p class="item-desc">Item Description: {{ id.item_description }}</p>
+                    <h3 class="item-cost">Price: &#8377;{{ id.item_price }}</h3>
+                    <button id="btn"><a id="a" href="{% url 'foodapp:update_item' id.id %}">Update Item</a></button>
+                    <button id="btn"><a id="a" href="{% url 'foodapp:delete_item' id.id %}">Delete Item</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js" integrity="sha512-b+nQTCdtTBIRIbraqNEwsjB6UvL3UEMkXnhzd8awtCYh0Kcsjl9uEgwVFVbhoj3uu1DO1ZMacNvLoyJJiNfcvg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+</body>
+</html>
+
+
+
+    

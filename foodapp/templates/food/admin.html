@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <link rel="stylesheet" href="{% static 'food/admins.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/v4-shims.min.css" integrity="sha512-U+fiq69HDM4etLVUiZeQxmJE5AZoft4ti4TIM95MqXV0IjBXgT2oHw5cNeIFqz3OE/axTKQIR8e7zlm3xbOVmg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .achild> a:hover{
+        background-color: purple;
+        color: white;
+        border: none;
+
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="parent">
+            <div class="child achild">
+                <ion-icon name="fast-food-outline"></ion-icon>
+                <b>Food App</b>
+            </div>
+            <div class="child">
+                
+                <a href="{% url 'foodapp:ctreateItem' %}">Add item</a>
+                <a href="{% url 'foodapp:contactview' %}">View Contacts</a>
+                <a href="">View Users</a>
+            </div>
+            <div class="child social">
+                <a href="{% url 'foodapp:home' %}"><ion-icon name="log-out-outline"></ion-icon>Logout</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="menu-items">
+            {% for i in item %}
+            <div class="menu-item">
+                <img src="{{ i.item_image }}" alt="{{ i.item_name }}" class="item-image">
+                <div class="item-info">
+                    <h3>{{ i.item_name }}</h3>
+                    <p class="item-description">{{ i.item_description }}</p>
+                    <p class="item-price">₹{{ i.item_price }}</p>
+                    <a href="{% url 'foodapp:details' i.id %}" class="view-details">View Details</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </main>
+    
+    
+    
+    
+    <footer>
+        <p>&copy; {% now 'Y' %} FoodApp. All Rights Reserved.</p>
+    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js" integrity="sha512-b+nQTCdtTBIRIbraqNEwsjB6UvL3UEMkXnhzd8awtCYh0Kcsjl9uEgwVFVbhoj3uu1DO1ZMacNvLoyJJiNfcvg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>
